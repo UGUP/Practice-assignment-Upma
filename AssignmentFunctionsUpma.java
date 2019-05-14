@@ -2,18 +2,44 @@ package com.company;
 
 public class AssignmentFunctionsUpma {
     
-    public static void main(String[] args)
-    {
-        
-        {
-        Scanner input1 = new Scanner(System.in);
-        int number1 = input1.nextInt();
-        int number2 = input1.nextInt();
-        sum(number1,number2);
-        sub(number1,number2);
-        div(number1,number2);
-        mul(number1,number2);
+   int choice=0,number1=0,number2=0;
 
+        System.out.println("Welcome to the calculator"+"\n"+"1.Addition"+"\n"+"2.Subtraction"+"\n"+"3.Subtraction"+"\n"+"4.Division"+"\n"+
+                "Enter your choice(1-4)");
+
+        Scanner input1 = new Scanner(System.in);
+
+        choice=input1.nextInt();
+
+        System.out.println("Enter the numbers");
+
+         number1 = input1.nextInt();
+         number2 = input1.nextInt();
+
+
+        switch(choice)
+
+        {
+            case 1:
+                sum(number1,number2);
+                break;
+
+            case 2:
+                sub(number1,number2);
+                break;
+
+            case 3:
+                mul(number1,number2);
+                break;
+
+            case 4:
+                div(number1,number2);
+                break;
+
+            default:
+                System.out.println("Invalid option");
+
+        }
 
     }
 
@@ -28,11 +54,11 @@ public class AssignmentFunctionsUpma {
 
         }
 
-    public static void div(int number1,int number2)
+    public static void div(double number1,double number2)
 
     {     double div = 0;
 
-        div = (double)number1 / (double)number2;
+        div = number1 / number2;
 
         System.out.println("The division of number "+number1+" and "+number2+" is "+div);
     }
