@@ -1,86 +1,110 @@
 package com.company;
 
-public class AssignmentFunctionsUpma {
-    
-   int choice=0,number1=0,number2=0;
+import java.util.*;
 
-        System.out.println("Welcome to the calculator"+"\n"+"1.Addition"+"\n"+"2.Subtraction"+"\n"+"3.Subtraction"+"\n"+"4.Division"+"\n"+
+public class Functions_ass {
+
+
+    public static void main(String args[])
+
+    {
+        double number1=0.0,number2=0.0;//Declaration of variables
+
+        double a=mainFunction(number1,number2);//Calling the function after operation
+
+        System.out.println("The return value is "+a);//Printing the output
+    }
+
+    public static double mainFunction(double number1,double number2) {///creating the main function which is calling all the operation functions
+
+        int choice = 0;
+        number1 = 0.0;
+        number2 = 0.0;
+
+        System.out.println("Welcome to the calculator" + "\n" + "1.Addition" + "\n" + "2.Subtraction" + "\n" + "3.Multiplication" + "\n" + "4.Division" + "\n" +
                 "Enter your choice(1-4)");
 
         Scanner input1 = new Scanner(System.in);
 
-        choice=input1.nextInt();
+        choice = input1.nextInt();
 
         System.out.println("Enter the numbers");
 
-         number1 = input1.nextInt();
-         number2 = input1.nextInt();
+        number1 = input1.nextDouble();
+        number2 = input1.nextDouble();
 
 
-        switch(choice)
-
-        {
+        switch (choice) {//Switch case to call each function based on the choice 
             case 1:
-                sum(number1,number2);
-                break;
+                double sum = sum(number1, number2);
+               return (sum);//this is to return the function value to a single variable choice.
 
             case 2:
-                sub(number1,number2);
-                break;
+                double sub = sub(number1, number2);
+                return (sub);
+
 
             case 3:
-                mul(number1,number2);
-                break;
+                double mul = mul(number1, number2);
+                return (mul);
+
 
             case 4:
-                div(number1,number2);
-                break;
+                double div = div(number1, number2);
+                return (div);
+
+
 
             default:
                 System.out.println("Invalid option");
 
         }
 
+        return(choice);
+
     }
 
 
-       public static void sum(int number1,int number2)
+
+       public static double sum(double number1,double number2)//sum function created
 
         {
-            int sum = 0;
+            double sum = 0;
             sum = number1 + number2;
-
-            System.out.println("The sum of number " + number1 + " and " + number2 + " is " + sum);
+            return(sum);
 
         }
 
-    public static void div(double number1,double number2)
+    public static double div(double number1,double number2)//div function created
 
     {     double div = 0;
 
         div = number1 / number2;
 
-        System.out.println("The division of number "+number1+" and "+number2+" is "+div);
+        return(div);
+
+
     }
 
 
-    public static void mul(int number1,int number2)
+    public static double mul(double number1,double number2)//multiplication function created
 
     {
-        int mul = 0;
+        double mul = 0;
 
         mul = number1 * number2;
-        System.out.println("The multiplicatin of number "+number1+" and "+number2+" is "+mul);
+
+        return(mul);
     }
 
-    public static void sub(int number1,int number2)
+    public static double sub(double number1,double number2)//sub function created
 
     {
-        int sub = 0;
+        double sub = 0;
 
 
         sub = Math.abs(number1 - number2);
-        System.out.println("The subtraction of number "+number1+" and "+number2+" is "+sub);
+        return(sub);
 
     }
 
@@ -88,5 +112,3 @@ public class AssignmentFunctionsUpma {
 
 
     }
-
-        
