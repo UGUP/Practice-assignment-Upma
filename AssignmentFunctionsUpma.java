@@ -6,19 +6,33 @@ public class Functions_ass {
 
 
     public static void main(String args[]) {
+        String choice2;
 
-        System.out.println("Welcome to the calculator" + "\n" + "1.Addition" + "\n" + "2.Subtraction" + "\n" + "3.Multiplication" + "\n" + "4.Division" + "\n" +
-                "Enter your choice(1-4)");
+        do {
 
-        Scanner input1 = new Scanner(System.in);
+            System.out.println("Welcome to the calculator" + "\n" + "1.Addition" + "\n" + "2.Subtraction" + "\n" + "3.Multiplication" + "\n" + "4.Division" + "\n" +
+                    "Enter your choice(1-4)");
 
-        int choice = input1.nextInt();
+            Scanner input1 = new Scanner(System.in);
 
-        double result = Calculator(choice);
+            int choice = input1.nextInt();
 
-        System.out.println("The result value is " + result);
+            double result = Calculator(choice);
+
+            System.out.println("The result value is " + result);
+
+            System.out.println("Thankyou Do you want to try again? Y/N");
+            choice2 = input1.next();
+        }
+
+        while(choice2.equals("Y"));
+        
 
     }
+
+
+
+
 
 
     public static double Calculator(int choice) {
