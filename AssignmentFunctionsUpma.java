@@ -2,22 +2,22 @@ package com.company;
 
 import java.util.*;
 
-public class Functions_ass {
+public class Functions_ass {  //Creation of the Class
 
 
-    public static void main(String args[]) {
-        String choice2;
+    public static void main(String args[]) {//Main Function
+        String choice2;//Declaration of variable to call the Calculator function again
 
-        do {
+        do {//Loop to run the Calculator function again
 
             System.out.println("Welcome to the calculator" + "\n" + "1.Addition" + "\n" + "2.Subtraction" + "\n" + "3.Multiplication" + "\n" + "4.Division" + "\n" +
                     "Enter your choice(1-4)");
 
             Scanner input1 = new Scanner(System.in);
 
-            int choice = input1.nextInt();
+            int choice = input1.nextInt();//Declaring the variable to input the operation to be performed
 
-            double result = Calculator(choice);
+            double result = Calculator(choice);//Calling the calculator function
 
             System.out.println("The result value is " + result);
 
@@ -25,7 +25,7 @@ public class Functions_ass {
             choice2 = input1.next();
         }
 
-        while(choice2.equals("Y"));
+        while(choice2.equals("Y"));//loop to run the calculator function again
 
 
     }
@@ -36,18 +36,11 @@ public class Functions_ass {
 
 
     public static double Calculator(int choice) {
-        double result = SwitchCase(choice);
 
-        return result;
-
-
-    }
-
-    public static double SwitchCase(int choice) {
 
         double number1=0.0,number2=0.0;
 
-       try {
+       try {//Exception handling to handle the exception of invalid input of numbers
            System.out.println("Enter the numbers");
            Scanner input1 = new Scanner(System.in);
             number1 = input1.nextDouble();
@@ -55,11 +48,11 @@ public class Functions_ass {
 
        }
 
-       catch(Exception e )
+       catch(Exception e )//exception handled
 
        {
            System.out.println("Please enter integer values");
-           
+
 
        }
 
