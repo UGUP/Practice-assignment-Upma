@@ -26,7 +26,7 @@ public class Functions_ass {
         }
 
         while(choice2.equals("Y"));
-        
+
 
     }
 
@@ -45,10 +45,25 @@ public class Functions_ass {
 
     public static double SwitchCase(int choice) {
 
-        System.out.println("Enter the numbers");
-        Scanner input1 = new Scanner(System.in);
-        double number1 = input1.nextDouble();
-        double number2 = input1.nextDouble();
+        double number1=0.0,number2=0.0;
+
+       try {
+           System.out.println("Enter the numbers");
+           Scanner input1 = new Scanner(System.in);
+            number1 = input1.nextDouble();
+            number2 = input1.nextDouble();
+
+       }
+
+       catch(Exception e )
+
+       {
+           System.out.println("Please enter integer values");
+           
+
+       }
+
+
         double result = 0.0;
         switch (choice) {//Switch case to call each function based on the choice
             case 1:
